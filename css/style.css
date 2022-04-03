@@ -4,13 +4,25 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  background-color: #f7fff7;
+  font-family: "Poppins", sans-serif;
+}
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#loading .loading__wrap {
+.container {
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+#loading, #loading .loading__wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +32,7 @@
   width: 100vw;
   height: 100vh;
   background-color: black;
+  display: none;
 }
 #loading .loading__wrap {
   width: 100%;
@@ -28,6 +41,44 @@
 #loading .loading__wrap svg {
   width: 20vw;
   max-width: 250px;
+}
+
+main .content__wrap {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+main .content__wrap .main__content {
+  order: 5;
+}
+main .content__wrap .main__content .title {
+  font-weight: 900;
+  text-transform: capitalize;
+}
+main .content__wrap .main__content .title h1 {
+  line-height: 120%;
+}
+main .content__wrap .main__content .title h1:first-child {
+  font-weight: 700;
+  width: 75%;
+  position: relative;
+}
+main .content__wrap .main__content .title h1:last-child {
+  font-weight: 800;
+  background: linear-gradient(90deg, #001baa -43.23%, #00a3aa 79.87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+main .content__wrap .main__content .title h1 #cloud__marker {
+  position: absolute;
+  right: 10px;
+  width: 110px;
+}
+main .content__wrap .main__anima {
+  width: 100%;
+  order: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

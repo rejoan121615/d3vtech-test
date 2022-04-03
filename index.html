@@ -5,53 +5,187 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <!-- fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- lottie animation  -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <!-- style link  -->
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
         <!-- loading screen  -->
-        <section id="loading">
-          <div class="loading__wrap">
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 605 550">
-              <g id="load__path__con">
-                <g id="path__4" filter="url(#filter0_d_2_9)">
-                  <path  d="M568 141c-81.6-88-169.333-42-203-8C329 21 234.345 0 182 0 111 0 4 49.475 4 187c0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z" fill="url(#paint0_linear_2_9)" fill-opacity=".56" shape-rendering="crispEdges"/>
-                </g>
-                <path  id="path__3" d="M568 180c-81.6-88-169.333-42-203-8C329 60 234.345 39 182 39 111 39 4 88.475 4 226c0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z" fill="url(#paint1_linear_2_9)"/>
-                <path  id="path__2" d="M568 216c-81.6-88-169.333-42-203-8C329 96 234.345 75 182 75 111 75 4 124.475 4 262c0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z" fill="url(#paint2_linear_2_9)" fill-opacity=".47"/>
-                <path  id="path__1" d="M568 254c-81.6-88-169.333-42-203-8-36-112-130.655-133-183-133-71 0-178 49.475-178 187 0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z" fill="url(#paint3_linear_2_9)" fill-opacity=".47"/>
-              </g>
-              <defs>
-                <linearGradient id="paint0_linear_2_9" x1="87" y1="195" x2="549" y2="241" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#00AEFD" stop-opacity=".65"/>
-                  <stop offset="1" stop-color="#85F58B" stop-opacity=".35"/>
-                </linearGradient>
-                <linearGradient id="paint1_linear_2_9" x1="77" y1="223" x2="505" y2="255" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#3B9EE1"/>
-                  <stop offset="1" stop-color="#71D9E9"/>
-                </linearGradient>
-                <linearGradient id="paint2_linear_2_9" x1="534" y1="357" x2="55" y2="281" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#1D71CA"/>
-                  <stop offset="1" stop-color="#034A59" stop-opacity=".51"/>
-                </linearGradient>
-                <linearGradient id="paint3_linear_2_9" x1="75" y1="263" x2="633" y2="839" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#001EAA"/>
-                  <stop offset="1" stop-color="#00A6E9"/>
-                </linearGradient>
-                <filter id="filter0_d_2_9" x="0" y="0" width="604.213" height="375.208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                  <feOffset dy="4"/>
-                  <feGaussianBlur stdDeviation="2"/>
-                  <feComposite in2="hardAlpha" operator="out"/>
-                  <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_2_9"/>
-                  <feBlend in="SourceGraphic" in2="effect1_dropShadow_2_9" result="shape"/>
-                </filter>
-              </defs>
-            </svg>
-          </div>
-        </section>
+        <!-- <section id="loading">
+            <div class="loading__wrap">
+                <svg
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 605 550"
+                >
+                    <g id="load__path__con">
+                        <g id="path__4" filter="url(#filter0_d_2_9)">
+                            <path
+                                d="M568 141c-81.6-88-169.333-42-203-8C329 21 234.345 0 182 0 111 0 4 49.475 4 187c0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z"
+                                fill="url(#paint0_linear_2_9)"
+                                fill-opacity=".56"
+                                shape-rendering="crispEdges"
+                            />
+                        </g>
+                        <path
+                            id="path__3"
+                            d="M568 180c-81.6-88-169.333-42-203-8C329 60 234.345 39 182 39 111 39 4 88.475 4 226c0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z"
+                            fill="url(#paint1_linear_2_9)"
+                        />
+                        <path
+                            id="path__2"
+                            d="M568 216c-81.6-88-169.333-42-203-8C329 96 234.345 75 182 75 111 75 4 124.475 4 262c0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z"
+                            fill="url(#paint2_linear_2_9)"
+                            fill-opacity=".47"
+                        />
+                        <path
+                            id="path__1"
+                            d="M568 254c-81.6-88-169.333-42-203-8-36-112-130.655-133-183-133-71 0-178 49.475-178 187 0 109 104 176.835 162 178 83 1.667 262.8 4 318 0 69-5 168-116 84-224Z"
+                            fill="url(#paint3_linear_2_9)"
+                            fill-opacity=".47"
+                        />
+                    </g>
+                    <defs>
+                        <linearGradient
+                            id="paint0_linear_2_9"
+                            x1="87"
+                            y1="195"
+                            x2="549"
+                            y2="241"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#00AEFD" stop-opacity=".65" />
+                            <stop
+                                offset="1"
+                                stop-color="#85F58B"
+                                stop-opacity=".35"
+                            />
+                        </linearGradient>
+                        <linearGradient
+                            id="paint1_linear_2_9"
+                            x1="77"
+                            y1="223"
+                            x2="505"
+                            y2="255"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#3B9EE1" />
+                            <stop offset="1" stop-color="#71D9E9" />
+                        </linearGradient>
+                        <linearGradient
+                            id="paint2_linear_2_9"
+                            x1="534"
+                            y1="357"
+                            x2="55"
+                            y2="281"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#1D71CA" />
+                            <stop
+                                offset="1"
+                                stop-color="#034A59"
+                                stop-opacity=".51"
+                            />
+                        </linearGradient>
+                        <linearGradient
+                            id="paint3_linear_2_9"
+                            x1="75"
+                            y1="263"
+                            x2="633"
+                            y2="839"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#001EAA" />
+                            <stop offset="1" stop-color="#00A6E9" />
+                        </linearGradient>
+                        <filter
+                            id="filter0_d_2_9"
+                            x="0"
+                            y="0"
+                            width="604.213"
+                            height="375.208"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                        >
+                            <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                            />
+                            <feColorMatrix
+                                in="SourceAlpha"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                            />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                            />
+                            <feBlend
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_2_9"
+                            />
+                            <feBlend
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_2_9"
+                                result="shape"
+                            />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </section> -->
+        <!-- header section  -->
 
+        <!-- main section  -->
+        <main>
+            <div class="container">
+                <div class="content__wrap">
+                    <!-- right side content  -->
+
+                    <div class="main__content">
+                        <div class="title">
+                            <h1>
+                                your cloud
+                                <svg
+                                  id="cloud__marker"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 252 89"
+                                >
+                                    <path
+                                        d="M154.424 78.429c-42.886 6.307-65.412 10.931-94.436 7.147C31.743 81.894-5.263 80.553 2.373 31.76 7.57-1.456 69.085-.647 108.939 2.328c22.526 1.682 124.76-9.25 139.489 29.431C274.55 100.364 110.671 91.043 64.32 81.114"
+                                        stroke="#000"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </h1>
+                            <h1>solution partner</h1>
+                        </div>
+                    </div>
+                    <!-- left side animation  -->
+                    <div class="main__anima">
+                        <lottie-player
+                            src="https://assets3.lottiefiles.com/packages/lf20_zfbyxadx.json"
+                            background="transparent"
+                            speed="1"
+                            loop
+                            autoplay
+                        ></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </main>
 
         <!-- js file  -->
         <script src="./js/gsap.min.js"></script>

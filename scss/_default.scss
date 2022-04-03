@@ -12,9 +12,23 @@
     }
 }
 
+body {
+    width: 100%;
+    background-color: #f7fff7;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 // center any element
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// container
+.container {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
 }

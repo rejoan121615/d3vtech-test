@@ -1,0 +1,47 @@
+main {
+    .content__wrap {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        // texts
+        .main__content {
+            order: 5;
+            .title {
+                font-weight: 900;
+                text-transform: capitalize;
+                h1 {
+                    line-height: 120%;
+                    &:first-child {
+                        font-weight: 700;
+                        width: 75%;
+                        position: relative;
+                    }
+                    &:last-child {
+                        font-weight: 800;
+                        background: linear-gradient(
+                            90deg,
+                            #001baa -43.23%,
+                            #00a3aa 79.87%
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+
+                    // colud bg round
+                    #cloud__marker {
+                        position: absolute;
+                        right: 10px;
+                        width: 110px;
+                    }
+                }
+            }
+        }
+        // animation
+        .main__anima {
+            width: 100%;
+            order: 2;
+        }
+    }
+}
