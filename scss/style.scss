@@ -12,14 +12,21 @@
     }
 }
 
+
+
 // variable
+
+// color name 
+$hot__red: #fd4303;
+
+
 $respList: (
     576px: 540px,
     768px: 720px,
     992px: 960px,
     1200px: 1140px,
     1400px: 1320px,
-    1800px: 1720px,
+    // 1800px: 1720px,
 );
 
 $sm: 576px;
@@ -27,7 +34,6 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
-$mxl: 1800px;
 
 // modules
 %center {
@@ -57,9 +63,9 @@ body {
     padding-right: 18px;
     margin-left: auto;
     margin-right: auto;
-    @include resp ($sm) {
-      padding-left: 0;
-      padding-right: 0;
+    @include resp($sm) {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -71,8 +77,102 @@ body {
     }
 }
 
+// text style 
+.para {
+  font-weight: 500;
+  font-size: 16px;
+  @include resp ($sm) {
+    font-size: 18px;
+  }
+  @include resp ($md) {
+    font-size: 20px;
+  }
+  @include resp ($xxl) {
+    font-size: 22px;
+  }
+}
+
+
+// section title 
+.sec__title {
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #003faa;
+  @include resp ($md) {
+    font-size: 40px;
+  }
+
+  @include resp ($xxl) {
+    font-size: 60px;
+    line-height: 100%;
+  }
+}
+
+// section discription 
+.sec__dis {
+  font-weight: 400;
+  text-align: center;
+  @include resp (450px) {
+    font-size: 22px;
+  }
+  @include resp ($md) {
+    font-size: 24px;
+  }
+  @include resp ($xxl) {
+    font-size: 36px;
+  }
+}
+
+// button style 
+.btn {
+  background-color: $hot__red;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-transform: capitalize;
+  padding: 13px 0px;
+  border-radius: 8px;
+  // hover effect 
+  &:hover {
+    background-color: #f4906e;
+  }
+  @include resp ($sm) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include resp ($md) {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  @include resp ($xl) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @include resp ($xxl) {
+    font-size: 20px;
+    padding: 25px 0px;
+    border-radius: 15px;
+  }
+  svg {
+    width: 15px;
+    fill: white;
+    margin-left: 5px;
+    @include resp ($xl) {
+      width: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+
 // section modules -------------------
 
-// loading module 
-@import 'sections/loading';
-@import "sections/main"
+// loading module
+@import "sections/loading";
+@import "sections/main";
+@import "sections/services";

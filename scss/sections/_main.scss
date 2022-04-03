@@ -7,9 +7,7 @@ main {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
-        @include resp($mxl) {
-            height: 670px;
-        }
+
         // texts
         .main__content {
             order: 5;
@@ -32,9 +30,7 @@ main {
                     @include resp($xxl) {
                         font-size: 55px;
                     }
-                    @include resp($mxl) {
-                        font-size: 75px;
-                    }
+
                     &:first-child {
                         font-weight: 600;
                         width: 200px;
@@ -47,9 +43,6 @@ main {
                         }
                         @include resp($xxl) {
                             width: 350px;
-                        }
-                        @include resp($mxl) {
-                            width: 450px;
                         }
                     }
                     &:last-child {
@@ -76,9 +69,6 @@ main {
                         @include resp($xxl) {
                             width: 200px;
                         }
-                        @include resp($mxl) {
-                            width: 250px;
-                        }
                     }
                 }
             }
@@ -99,10 +89,7 @@ main {
                     font-size: 28px;
                     margin-top: 20px;
                 }
-                @include resp($mxl) {
-                    font-size: 32px;
-                    max-width: 80%;
-                }
+
                 span {
                     font-weight: 700;
                 }
@@ -124,10 +111,7 @@ main {
                 @include resp($lg) {
                     font-size: 24px;
                 }
-                @include resp($mxl) {
-                    font-size: 28px;
-                    margin-top: 17px;
-                }
+
                 svg {
                     width: 15px;
                     margin-left: 5px;
@@ -147,10 +131,7 @@ main {
                 @include resp($xl) {
                     margin-top: 30px;
                 }
-                @include resp($mxl) {
-                    max-width: 500px;
-                    margin-top: 35px;
-                }
+
                 a {
                     display: inline-block;
                     width: 48%;
@@ -197,9 +178,7 @@ main {
             @include resp($xxl) {
                 height: 210px;
             }
-            @include resp($mxl) {
-                height: 260px;
-            }
+
             // after effect
         }
         // img animation

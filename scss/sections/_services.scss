@@ -1,0 +1,108 @@
+#services {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @include resp ($xxl) {
+          padding-bottom: 75px;
+        }
+        // title
+        .sec__title {
+        }
+        // card wrapper
+        .card__wrapper {
+          display: grid;
+          justify-items: center;
+          margin-top: 40px;
+          grid-template-columns: minmax( 1fr, 320px);
+          grid-row-gap: 25px;
+          @include resp ($sm) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 18px;
+            grid-row-gap: 18px;
+          }
+          @include resp ($md) {
+            grid-gap: 35px;
+            margin-top: 55px;
+          }
+          @include resp ($lg) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 25px;
+          }
+          @include resp ($xl) {
+            grid-gap: 40px;
+          }
+          @include resp ($xxl) {
+            margin-top: 80px;
+          }
+          
+            // card
+            .cards {
+                text-align: center;
+                box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                padding: 25px 15px 15px 15px;
+                max-width: 320px;
+                @include resp ($sm) {
+                  max-width: initial;
+                }
+                @include resp ($md) {
+                  padding: 35px 20px 20px 20px;
+                }
+              @include resp ($xxl) {
+                padding: 45px 25px 25px 25px;
+                max-width: initial;
+                border-radius: 25px;
+              }
+             
+              // image 
+              img {
+                width: 125px;
+                @include resp ($sm) {
+                  width: 100px;
+                }
+                @include resp ($xxl) {
+                  width: 135px;
+                }
+              }
+
+                // title 
+                h3.card__title {
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    margin-top: 15px;
+                    font-size: 22px;
+                    @include resp ($lg) {
+                      font-size: 26px;
+                    }
+                    @include resp ($xxl) {
+                      font-size: 30px;
+                    }
+                }
+                // para 
+                .para {
+                  margin-top: 10px;
+                  font-weight: 400;
+                  @include resp ($md) {
+                    font-size: 18px;
+                  }
+                  @include resp ($xxl) {
+                    font-size: 24px;
+                  }
+                }
+                // button 
+                .btn {
+                  margin-top: 20px;
+                  @include resp ($sm) {
+                    // font-size: 14px;
+                  }
+                  @include resp ($md) {
+                    // font-size: 16px;
+                  }
+                  @include resp ($xxl) {
+                    margin-top: 40px;
+                  }
+                }
+            }
+        }
+    }
+}
