@@ -3,18 +3,54 @@ main {
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+        @include resp($md) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include resp($mxl) {
+            height: 670px;
+        }
         // texts
         .main__content {
             order: 5;
+            @include resp($md) {
+                order: 1;
+            }
+            // title  texts ------------------
             .title {
                 font-weight: 900;
                 text-transform: capitalize;
+                // max-width: 280px;
                 h1 {
                     line-height: 120%;
+                    @include resp(450px) {
+                        font-size: 40px;
+                    }
+                    @include resp($lg) {
+                        font-size: 45px;
+                    }
+                    @include resp($xxl) {
+                        font-size: 55px;
+                    }
+                    @include resp($mxl) {
+                        font-size: 75px;
+                    }
                     &:first-child {
-                        font-weight: 700;
-                        width: 75%;
+                        font-weight: 600;
+                        width: 200px;
                         position: relative;
+                        @include resp(450px) {
+                            width: 250px;
+                        }
+                        @include resp($lg) {
+                            width: 265px;
+                        }
+                        @include resp($xxl) {
+                            width: 350px;
+                        }
+                        @include resp($mxl) {
+                            width: 450px;
+                        }
                     }
                     &:last-child {
                         font-weight: 800;
@@ -34,6 +70,93 @@ main {
                         position: absolute;
                         right: 10px;
                         width: 110px;
+                        @include resp(450px) {
+                            width: 140px;
+                        }
+                        @include resp($xxl) {
+                            width: 200px;
+                        }
+                        @include resp($mxl) {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+            // discription
+            .main__disc {
+                margin-top: 15px;
+                font-size: 22px;
+                @include resp($sm) {
+                    font-size: 23px;
+                }
+                @include resp($md) {
+                    font-size: 20px;
+                }
+                @include resp($lg) {
+                    font-size: 23px;
+                }
+                @include resp($xl) {
+                    font-size: 28px;
+                    margin-top: 20px;
+                }
+                @include resp($mxl) {
+                    font-size: 32px;
+                    max-width: 80%;
+                }
+                span {
+                    font-weight: 700;
+                }
+            }
+            // consultant links
+            .consult__link {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 100%;
+                color: #001baa;
+                text-decoration: none;
+                margin-top: 10px;
+                display: inline-block;
+                @include resp($sm) {
+                    font-size: 20px;
+                    line-height: 125%;
+                    margin-top: 15px;
+                }
+                @include resp($lg) {
+                    font-size: 24px;
+                }
+                @include resp($mxl) {
+                    font-size: 28px;
+                    margin-top: 17px;
+                }
+                svg {
+                    width: 15px;
+                    margin-left: 5px;
+                }
+            }
+            // partner and review
+            .partner__review {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                max-width: 320px;
+                margin-top: 15px;
+                @include resp($lg) {
+                    max-width: 400px;
+                    margin-top: 25px;
+                }
+                @include resp($xl) {
+                    margin-top: 30px;
+                }
+                @include resp($mxl) {
+                    max-width: 500px;
+                    margin-top: 35px;
+                }
+                a {
+                    display: inline-block;
+                    width: 48%;
+                    @extend %center;
+                    img {
+                        width: 100%;
                     }
                 }
             }
@@ -42,6 +165,40 @@ main {
         .main__anima {
             width: 100%;
             order: 2;
+            width: 100%;
+            max-width: 500px;
+            @include resp($lg) {
+                max-width: initial;
+            }
+            @include resp($xxl) {
+                max-width: 750px;
+            }
+        }
+    }
+    // wave image
+    .wave__img {
+        width: 100%;
+        display: none;
+        @include resp($sm) {
+            display: block;
+        }
+        img {
+            width: 100%;
+            @include resp($sm) {
+                height: 120px;
+            }
+            @include resp($md) {
+                height: 155px;
+            }
+            @include resp($xl) {
+                height: 180px;
+            }
+            @include resp($xxl) {
+                height: 210px;
+            }
+            @include resp($mxl) {
+                height: 260px;
+            }
         }
     }
 }

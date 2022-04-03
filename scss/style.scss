@@ -1,6 +1,78 @@
-@use 'default';
-@use "loading";
-// section style 
-@use  'sections/main';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-// loading style
+// mixing ------------------------
+
+@mixin resp($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+// variable
+$respList: (
+    576px: 540px,
+    768px: 720px,
+    992px: 960px,
+    1200px: 1140px,
+    1400px: 1320px,
+    1800px: 1720px,
+);
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$mxl: 1800px;
+
+// modules
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// common style
+
+body {
+    width: 100%;
+    background-color: #f7fff7;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    @include resp ($sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+}
+
+@each $screen, $container in $respList {
+    .container {
+        @include resp($screen) {
+            max-width: $container;
+        }
+    }
+}
+
+// section modules -------------------
+
+// loading module 
+@import 'sections/loading';
+@import "sections/main"
