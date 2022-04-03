@@ -179,6 +179,7 @@ main {
     .wave__img {
         width: 100%;
         display: none;
+        position: relative;
         @include resp($sm) {
             display: block;
         }
@@ -199,6 +200,16 @@ main {
             @include resp($mxl) {
                 height: 260px;
             }
+            // after effect
+        }
+        // img animation
+        .img__anim {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #f7fff7;
         }
     }
 }

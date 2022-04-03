@@ -307,6 +307,7 @@ main .content__wrap .main__anima {
 main .wave__img {
   width: 100%;
   display: none;
+  position: relative;
 }
 @media only screen and (min-width: 576px) {
   main .wave__img {
@@ -340,6 +341,14 @@ main .wave__img img {
   main .wave__img img {
     height: 260px;
   }
+}
+main .wave__img .img__anim {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #f7fff7;
 }
 
 /*# sourceMappingURL=style.css.map */
