@@ -3,8 +3,11 @@
     width: 100vw;
     height: 100vh;
     background-color: black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 500;
     @extend %center;
-    display: none;
     // reset style for animation
     #load__path__con {
         path {

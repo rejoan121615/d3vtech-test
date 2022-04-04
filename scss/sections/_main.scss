@@ -30,7 +30,7 @@ main {
                     @include resp($xl) {
                         font-size: 55px;
                     }
-                    @include resp ($xxl) {
+                    @include resp($xxl) {
                         font-size: 60px;
                     }
 
@@ -43,6 +43,9 @@ main {
                         }
                         @include resp($lg) {
                             width: 265px;
+                        }
+                        @include resp($xl) {
+                            width: 320px;
                         }
                         @include resp($xxl) {
                             width: 350px;
@@ -68,6 +71,9 @@ main {
                         width: 110px;
                         @include resp(450px) {
                             width: 140px;
+                        }
+                        @include resp($xl) {
+                            width: 180px;
                         }
                         @include resp($xxl) {
                             width: 200px;
@@ -142,6 +148,23 @@ main {
                     img {
                         width: 100%;
                     }
+                }
+                .partner {
+                    img {
+                    }
+                    &:last-child {
+                        img {
+                            margin-top: 6px;
+                            box-shadow: 0px 0px 5px #00000038;
+                            border-radius: 5px;
+                            height: 66px;
+                            @include resp ($lg) {
+                                height: 81px;
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+
                 }
             }
         }
