@@ -1,7 +1,17 @@
 #case__studies {
+  margin-bottom: 50px;
+  @include resp ($lg) {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  @include resp ($xl) {
+    margin-bottom: 100px;
+  }
+  @include resp ($xxl) {
+    margin-top: 80px;
+    margin-bottom: 140px;
+  }
   .container {
-    
-
     // posts wrapper 
     .post__wrap {
       display: grid;
@@ -42,6 +52,9 @@
         }
         @include resp ($lg) {
           grid-template-columns: 1fr;
+        }
+        @include resp ($xl) {
+          padding: 25px;
         }
         img {
           width: 100%;

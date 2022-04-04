@@ -2,8 +2,14 @@
     .container {
         padding-top: 50px;
         padding-bottom: 50px;
+        @include resp ($lg) {
+          padding-bottom: 120px;
+        }
+        @include resp ($xl) {
+          padding-bottom: 150px;
+        }
         @include resp ($xxl) {
-          padding-bottom: 75px;
+          padding-bottom: 190px;
         }
         // title
         .sec__title {

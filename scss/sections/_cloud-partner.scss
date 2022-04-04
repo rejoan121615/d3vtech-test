@@ -33,9 +33,11 @@
             }
             @include resp($lg) {
                 transform: translateY(-25px);
+                width: 410px;
             }
             @include resp($xl) {
                 transform: translateY(0px) scaleX(1.5);
+                width: 380px;
             }
             @include resp($xxl) {
                 width: 420px;
