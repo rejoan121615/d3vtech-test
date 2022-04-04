@@ -37,7 +37,8 @@ loadingTl
     .to("#loading", {
         height: "0",
       duration: 1.2,
-        background: 'white'
+        background: 'white',
+        
     });
 
 

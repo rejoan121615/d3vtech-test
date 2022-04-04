@@ -95,10 +95,10 @@ body {
     @include resp($md) {
         font-size: 40px;
     }
-    @include resp ($lg) {
+    @include resp($lg) {
         font-size: 50px;
     }
-    @include resp ($xl) {
+    @include resp($xl) {
         font-size: 55px;
     }
 
@@ -182,16 +182,16 @@ body {
     padding-left: 45px;
     padding-right: 45px;
     cursor: pointer;
-    @include resp ($lg) {
+    @include resp($lg) {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    @include resp ($xl) {
+    @include resp($xl) {
         padding: 25px 85px 25px 85px;
     }
 }
 
-// tags 
+// tags
 .tag__list {
     display: flex;
     flex-flow: row wrap;
@@ -204,7 +204,7 @@ body {
         padding: 7px 10px;
         text-transform: capitalize;
         border-radius: 5px;
-        @include resp ($lg) {
+        @include resp($lg) {
             font-size: 16px;
         }
     }
@@ -226,4 +226,4 @@ footer {
 @import "sections/main";
 @import "sections/services";
 @import "sections/cloud-partner";
-@import "sections/case-studies"
+@import "sections/case-studies";
