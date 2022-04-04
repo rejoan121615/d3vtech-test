@@ -85,9 +85,7 @@
                   @include resp ($md) {
                     font-size: 18px;
                   }
-                  @include resp ($xxl) {
-                    font-size: 24px;
-                  }
+                  
                 }
                 // button 
                 .btn {

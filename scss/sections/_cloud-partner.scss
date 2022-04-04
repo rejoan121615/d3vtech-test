@@ -9,14 +9,37 @@
         background-image: radial-gradient(
             circle,
             rgba(0, 164, 170, 0.62) 30%,
-            rgba(0, 26, 170, 0) 75%
+            rgba(0, 26, 170, 0) 70%
         );
         display: flex;
         justify-content: center;
+        position: relative;
+        z-index: 50;
+        @include resp ($xl) {
+            background-image: radial-gradient(
+            circle,
+            rgba(0, 164, 170, 0.62) 30%,
+            rgba(0, 26, 170, 0) 60%
+        );
+        }
         svg {
+            display: none;
             // width: 350px;
-            width: 70%;
-            margin-top: 105px;
+            // margin-top: 105px;
+            @include resp($md) {
+                display: block;
+
+                width: 380px;
+            }
+            @include resp($lg) {
+                transform: translateY(-25px);
+            }
+            @include resp($xl) {
+                transform: translateY(0px) scaleX(1.5);
+            }
+            @include resp($xxl) {
+                width: 420px;
+            }
         }
     }
     // partner content
@@ -24,6 +47,8 @@
         grid-row: 1/2;
         grid-column: 1/2;
         padding-bottom: 50px;
+        position: relative;
+        z-index: 100;
         @include resp($xl) {
             padding-bottom: 50px;
         }
@@ -47,14 +72,15 @@
         @include resp($sm) {
             row-gap: 45px;
         }
-        @include resp ($lg) {
+        @include resp($lg) {
             justify-items: center;
-            
+            row-gap: 60px;
         }
-        @include resp ($xl) {
+        @include resp($xl) {
             margin-top: 110px;
+            row-gap: 80px;
         }
-        @include resp ($xxl) {
+        @include resp($xxl) {
             margin-top: 150px;
         }
         // cards
@@ -68,16 +94,16 @@
                 align-items: center;
                 column-gap: 20px;
             }
-            @include resp ($lg) {
+            @include resp($lg) {
                 width: 85%;
                 column-gap: 35px;
             }
-            @include resp ($xl) {
+            @include resp($xl) {
                 grid-template-columns: 1fr 2fr;
                 width: 80%;
                 column-gap: 100px;
             }
-            @include resp ($xxl) {
+            @include resp($xxl) {
                 column-gap: 120px;
             }
 
@@ -95,7 +121,7 @@
                 @include resp($lg) {
                     padding: 25px 35px;
                 }
-                @include resp ($xl) {
+                @include resp($xl) {
                     width: initial;
                     height: initial;
                     padding: 40px 35px;
@@ -123,7 +149,7 @@
                     font-size: 23px;
                     line-height: 125%;
                     font-weight: 600;
-                    @include resp ($sm) {
+                    @include resp($sm) {
                         font-size: 28px;
                     }
                     @include resp($xl) {
@@ -136,33 +162,56 @@
                 // para
                 .para {
                     font-weight: 400;
+                    margin-top: 10px;
+                    @include resp($md) {
+                        margin-top: 15px;
+                    }
+                    @include resp($xl) {
+                        margin-top: 20px;
+                    }
                 }
-            } 
+            }
             // center card
             &:nth-child(2) {
                 justify-self: flex-end;
                 justify-items: flex-end;
-                @include resp ($md) {
+                @include resp($md) {
                     grid-auto-flow: dense;
                     direction: rtl;
                 }
-                @include resp ($lg) {
+                @include resp($lg) {
                     justify-self: initial;
                 }
-                // image wrap 
+                // image wrap
                 .img__wrap {
-                    @include resp ($lg) {
+                    @include resp($lg) {
                         justify-self: flex-start;
                     }
                 }
 
-                // card content 
+                // card content
                 .card__content {
-                    h3, .para {
+                    h3,
+                    .para {
                         text-align: right;
                     }
                 }
-                
+            }
+        }
+    }
+    // google partner button
+    .btn__wrap {
+        text-align: center;
+        a {
+            margin-top: 60px;
+            @include resp($sm) {
+                margin-top: 85px;
+            }
+            @include resp($md) {
+                margin-top: 100px;
+            }
+            @include resp($xxl) {
+                margin-top: 120px;
             }
         }
     }

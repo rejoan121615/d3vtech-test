@@ -81,11 +81,8 @@ body {
     @include resp($sm) {
         font-size: 18px;
     }
-    @include resp($md) {
+    @include resp($lg) {
         font-size: 20px;
-    }
-    @include resp($xxl) {
-        font-size: 22px;
     }
 }
 
@@ -162,6 +159,25 @@ body {
             width: 20px;
             margin-left: 10px;
         }
+    }
+}
+
+.btn__gradient {
+    @extend .btn;
+    background: linear-gradient(270deg, #009eaa 0%, #001baa 100%);
+    border-radius: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding-left: 45px;
+    padding-right: 45px;
+    cursor: pointer;
+    @include resp ($lg) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    @include resp ($xl) {
+        padding: 25px 85px 25px 85px;
     }
 }
 
