@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-main .content__wrap .main__content .partner__review a, #loading .loading__wrap, #loading {
+#google__cloud__partner .card__wrapper .card .img__wrap, main .content__wrap .main__content .partner__review a, #loading .loading__wrap, #loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,9 +229,14 @@ main .content__wrap .main__content .title h1 {
     font-size: 45px;
   }
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
   main .content__wrap .main__content .title h1 {
     font-size: 55px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  main .content__wrap .main__content .title h1 {
+    font-size: 60px;
   }
 }
 main .content__wrap .main__content .title h1:first-child {
@@ -532,6 +537,186 @@ main .wave__img .img__anim {
   #services .container .card__wrapper .cards .btn {
     margin-top: 40px;
   }
+}
+
+#google__cloud__partner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+#google__cloud__partner .partner__bg {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background-image: radial-gradient(circle, rgba(0, 164, 170, 0.62) 30%, rgba(0, 26, 170, 0) 75%);
+  display: flex;
+  justify-content: center;
+}
+#google__cloud__partner .partner__bg svg {
+  width: 70%;
+  margin-top: 105px;
+}
+#google__cloud__partner .container {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  padding-bottom: 50px;
+}
+@media only screen and (min-width: 1200px) {
+  #google__cloud__partner .container {
+    padding-bottom: 50px;
+  }
+}
+#google__cloud__partner .container .sec__title {
+  font-weight: 400;
+}
+@media only screen and (min-width: 1200px) {
+  #google__cloud__partner .container .sec__title {
+    font-size: 50px;
+  }
+}
+#google__cloud__partner .container .sec__title span {
+  font-weight: 800;
+}
+#google__cloud__partner .card__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  row-gap: 35px;
+  margin-top: 75px;
+}
+@media only screen and (min-width: 576px) {
+  #google__cloud__partner .card__wrapper {
+    row-gap: 45px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #google__cloud__partner .card__wrapper {
+    justify-items: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #google__cloud__partner .card__wrapper {
+    margin-top: 110px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #google__cloud__partner .card__wrapper {
+    margin-top: 150px;
+  }
+}
+#google__cloud__partner .card__wrapper .card {
+  display: grid;
+  row-gap: 15px;
+  max-width: 300px;
+}
+@media only screen and (min-width: 768px) {
+  #google__cloud__partner .card__wrapper .card {
+    max-width: initial;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #google__cloud__partner .card__wrapper .card {
+    width: 85%;
+    column-gap: 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #google__cloud__partner .card__wrapper .card {
+    grid-template-columns: 1fr 2fr;
+    width: 80%;
+    column-gap: 100px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #google__cloud__partner .card__wrapper .card {
+    column-gap: 120px;
+  }
+}
+#google__cloud__partner .card__wrapper .card .img__wrap {
+  background-color: white;
+  border-radius: 15px;
+  width: 225px;
+  height: 180px;
+}
+@media only screen and (min-width: 768px) {
+  #google__cloud__partner .card__wrapper .card .img__wrap {
+    width: 270px;
+    height: 245px;
+    padding: 15px 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #google__cloud__partner .card__wrapper .card .img__wrap {
+    padding: 25px 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #google__cloud__partner .card__wrapper .card .img__wrap {
+    width: initial;
+    height: initial;
+    padding: 40px 35px;
+  }
+}
+#google__cloud__partner .card__wrapper .card .img__wrap svg {
+  width: 125px;
+}
+@media only screen and (min-width: 768px) {
+  #google__cloud__partner .card__wrapper .card .img__wrap svg {
+    width: 100%;
+  }
+}
+#google__cloud__partner .card__wrapper .card .card__content h3 {
+  background: linear-gradient(90deg, rgba(231, 91, 0, 0.7) 0%, rgba(70, 30, 213, 0.525) 53.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 23px;
+  line-height: 125%;
+  font-weight: 600;
+}
+@media only screen and (min-width: 576px) {
+  #google__cloud__partner .card__wrapper .card .card__content h3 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #google__cloud__partner .card__wrapper .card .card__content h3 {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #google__cloud__partner .card__wrapper .card .card__content h3 {
+    font-size: 38px;
+  }
+}
+#google__cloud__partner .card__wrapper .card .card__content .para {
+  font-weight: 400;
+}
+#google__cloud__partner .card__wrapper .card:nth-child(2) {
+  justify-self: flex-end;
+  justify-items: flex-end;
+}
+@media only screen and (min-width: 768px) {
+  #google__cloud__partner .card__wrapper .card:nth-child(2) {
+    grid-auto-flow: dense;
+    direction: rtl;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #google__cloud__partner .card__wrapper .card:nth-child(2) {
+    justify-self: initial;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #google__cloud__partner .card__wrapper .card:nth-child(2) .img__wrap {
+    justify-self: flex-start;
+  }
+}
+#google__cloud__partner .card__wrapper .card:nth-child(2) .card__content h3, #google__cloud__partner .card__wrapper .card:nth-child(2) .card__content .para {
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */

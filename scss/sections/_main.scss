@@ -27,8 +27,11 @@ main {
                     @include resp($lg) {
                         font-size: 45px;
                     }
-                    @include resp($xxl) {
+                    @include resp($xl) {
                         font-size: 55px;
+                    }
+                    @include resp ($xxl) {
+                        font-size: 60px;
                     }
 
                     &:first-child {
