@@ -1,0 +1,70 @@
+#case__studies {
+  .container {
+    
+
+    // posts wrapper 
+    .post__wrap {
+      display: grid;
+      justify-items: center;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      row-gap: 25px;
+
+      @include resp ($lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+        margin-top: 60px;
+      }
+      @include resp ($xl) {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 25px;
+      }
+      @include resp ($xxl) {
+        margin-top: 73px;
+        margin-bottom: 80px;
+      }
+      // posts style 
+      .post {
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        max-width: 320px;
+        background-color: hsl(242deg 14% 95%);
+        @include resp ($sm) {
+          max-width: 400px;
+        }
+        @include resp ($md) {
+         display: grid;
+         max-width: initial;
+          grid-template-columns: 1fr 1.5fr;
+          column-gap: 25px;
+          padding: 20px;
+        }
+        @include resp ($lg) {
+          grid-template-columns: 1fr;
+        }
+        img {
+          width: 100%;
+          border-radius: 5px;
+          @include resp ($md) {
+            height: 100%;
+          }
+        }
+        // title 
+        .post__title {
+          @include resp ($lg) {
+            margin-top: 20px;
+          }
+        }
+        .para {
+          margin-top: 10px;
+        }
+        // tag lists 
+        .tag__list {
+          margin-top: 15px;
+        }
+      }
+
+    }
+  }
+}

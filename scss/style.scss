@@ -95,6 +95,12 @@ body {
     @include resp($md) {
         font-size: 40px;
     }
+    @include resp ($lg) {
+        font-size: 50px;
+    }
+    @include resp ($xl) {
+        font-size: 55px;
+    }
 
     @include resp($xxl) {
         font-size: 60px;
@@ -162,6 +168,10 @@ body {
     }
 }
 
+.btn__wrap {
+    text-align: center;
+}
+
 .btn__gradient {
     @extend .btn;
     background: linear-gradient(270deg, #009eaa 0%, #001baa 100%);
@@ -181,10 +191,39 @@ body {
     }
 }
 
-// section modules -------------------
+// tags 
+.tag__list {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 10px;
+    .tag {
+        font-size: 14px;
+        background-color: #545b62;
+        text-decoration: none;
+        color: white;
+        padding: 7px 10px;
+        text-transform: capitalize;
+        border-radius: 5px;
+        @include resp ($lg) {
+            font-size: 16px;
+        }
+    }
+}
+
+// footer section
+footer {
+    background-color: black;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    p {
+        text-align: center;
+        color: white;
+    }
+}
 
 // loading module
 @import "sections/loading";
 @import "sections/main";
 @import "sections/services";
 @import "sections/cloud-partner";
+@import "sections/case-studies"
